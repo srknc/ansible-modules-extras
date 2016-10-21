@@ -355,8 +355,7 @@ class EFSConnection(object):
         # we'll throw errors
         wait_for(
             lambda: self.get_file_system_state(name),
-            self.STATE_AVAILABLE,
-            self.wait_timeout
+            self.STATE_AVAILABLE
         )
 
         return changed
